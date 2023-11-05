@@ -1,4 +1,5 @@
 :root {
+  /* global variables */
   --primary-blue: #005bf8;
   --dark-blue: #00143a;
   --dark-grey: #323333;
@@ -6,6 +7,14 @@
   --light-grey-primary: #e1e2e4;
   --light-grey-secondary: #fafaf9;
   --light-lavendar: #c8aff8;
+
+  --font-primary: Inter;
+
+  --icon-width-sm: 16px;
+
+  --btn-primary-padding: 0.75rem 2rem;
+  --btn-onDark: white;
+  --btn-onLight: var(--dark-grey, #000);
 }
 
 *,
@@ -13,7 +22,10 @@
 *::after {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
+  /* padding: 0; */
+
+  /* global typography rules */
+  font-family: var(--font-primary, Inter), sans-serif;
 }
 
 /* Prevent font size inflation */
@@ -23,10 +35,17 @@ html {
   text-size-adjust: none;
 }
 
+body {
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul,
 ol {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 /* Make images easier to work with */
@@ -36,7 +55,129 @@ picture {
   display: block;
 }
 
+h1,
+h2 {
+  line-height: 1;
+  margin: 2rem 0;
+}
+
+p {
+  /* make small text easily readible */
+  max-width: 60vw;
+  margin: 1rem 0;
+}
+
+button {
+  border: none;
+  border-radius: 4px;
+  padding: var(--btn-primary-padding);
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
 a:hover,
 button:hover {
   cursor: pointer;
+}
+
+/* ================ End of Reset & Global Styles ================= */
+
+.hero_section {
+  height: max(85vh, 700px);
+  background-color: var(--primary-blue);
+  padding: 0 1rem;
+  color: white;
+  position: relative;
+}
+
+.hero_section .hero_box {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 3rem 0 0;
+  z-index: 1;
+  background-color: transparent;
+}
+
+.hero_box .nav_box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  margin: 0 clamp(24px, calc(3rem + 2vw), 64px);
+}
+
+.hero_box .nav_box .nav_links {
+  display: flex;
+  gap: 2rem;
+}
+
+.hero_box .nav_box img {
+  max-width: 150px;
+}
+
+.hero_box .nav_box .logo_main {
+  justify-self: center;
+  min-width: 100px;
+}
+
+.hero_box .nav_box .user_auth {
+  justify-self: end;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav_box .user_auth .btn_login {
+  background-color: transparent;
+  color: var(--btn-onDark);
+}
+
+.nav_box .user_auth .btn_signup {
+  background-color: white;
+  color: var(--btn-onLight);
+  z-index: 1; /*applicable because the btn is a flex item*/
+  box-shadow: -0.8px 3.1px 11.1px 5px rgba(0, 0, 0, 0.05),
+    -1.9px 7.5px 27.3px 5px rgba(0, 0, 0, 0.059),
+    -3.6px 14.1px 50px 5px rgba(0, 0, 0, 0.066),
+    -6.5px 25.2px 82.4px 5px rgba(0, 0, 0, 0.08),
+    -12.1px 47.2px 132.6px 5px rgba(0, 0, 0, 0.101),
+    -29px 113px 249px 5px rgba(0, 0, 0, 0.13);
+}
+
+.hero_section .hero_copy * {
+  text-align: center;
+  margin-inline: auto;
+}
+
+.hero_section .hero_heading {
+  font-size: clamp(32px, calc(1.5rem + 4vw), 4.5rem);
+  width: min(450px, 75vw);
+  line-height: 1;
+  margin-top: 4rem;
+}
+
+.hero_section .social_links {
+  position: absolute;
+  bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.hero_section .hero_img {
+  width: 64vw;
+  min-width: 250px;
+  margin-inline: 11vw 15vw;
+  position: absolute;
+  top: 50%;
+}
+
+.hero_section .bg_asset {
+  position: absolute;
+  width: clamp(15rem, 30vw + 4rem, 20rem);
+  top: -5rem;
+  right: -5rem;
 }

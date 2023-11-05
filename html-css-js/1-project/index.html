@@ -3,66 +3,101 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./style.css" />
     <title>smartAbode</title>
   </head>
   <body>
-    <header class="hero_box">
-      <!-- Hero navigation -->
+    <header class="hero_section">
+      <div class="hero_box">
+        <img src="./assets/s-icon-white.svg" alt="" class="bg_asset" />
+        <!-- Hero navigation -->
 
-      <nav class="nav_box">
-        <ul class="nav_links">
-          <li class="nav_link">Home</li>
-          <li class="nav_link">About</li>
-          <li class="nav_link">Testimonials</li>
-          <li class="nav_link">Contact</li>
+        <nav class="nav_box">
+          <ul class="nav_links">
+            <li class="nav_link">
+              <a href="#"> Home </a>
+            </li>
+            <li class="nav_link">
+              <a href="#"> About </a>
+            </li>
+            <li class="nav_link">
+              <a href="#"> Testimonials </a>
+            </li>
+            <li class="nav_link">
+              <a href="#"> Contact </a>
+            </li>
+          </ul>
+          <img
+            src="./assets/logo-white.svg"
+            alt="smart Abode logo"
+            class="logo logo_main"
+          />
+          <div class="user_auth">
+            <button class="btn btn_login" type="button">Login</button>
+            <button class="btn btn_signup" type="button">Sign up</button>
+          </div>
+        </nav>
+
+        <!-- Hero copy -->
+        <div class="hero_copy">
+          <h1 class="hero_heading">Smart Home Application</h1>
+          <p class="hero_copy">
+            Upgrade Your Lifestyle with Our Smart Home App - Effortlessly
+            Control Your Space, Anytime, Anywhere. Elevate your modern living
+            experience with cutting-edge convenience tailored for the young
+            professional.
+          </p>
+        </div>
+        <ul class="social_links">
+          <li class="social_link social_icon facebook">
+            <a href="https://www.facebook.com">
+              <img
+                src="./assets/facebook-icon.svg"
+                alt="facebook"
+                width="10px"
+              />
+            </a>
+          </li>
+          <li class="social_link social_icon insta">
+            <a href="https://www.instagram.com">
+              <img
+                src="./assets/instagram-icon.svg"
+                alt="instagram"
+                width="16px"
+              />
+            </a>
+          </li>
+          <li class="social_link social_icon twitter_x">
+            <a href="https://www.twitter.com">
+              <img
+                src="./assets/twitter-x-icon.svg"
+                alt="twitter/x"
+                width="16px"
+              />
+            </a>
+          </li>
+          <li class="social_link social_icon linkedin">
+            <a href="https://www.linkedin.com">
+              <img
+                src="./assets/linkedin-icon.svg"
+                alt="linkedin"
+                width="16px"
+              />
+            </a>
+          </li>
         </ul>
         <img
-          src="./assets/logo-white.svg"
-          alt="smart Abode logo"
-          class="logo logo_main"
+          src="./assets/hero-main-img-xl.png"
+          alt="hero image"
+          class="hero_img"
         />
-        <div class="user_auth">
-          <button class="btn btn_login" type="button">Login</button>
-          <button class="btn btn_signup" type="button">Sign up</button>
-        </div>
-      </nav>
-
-      <!-- Hero copy -->
-      <h1 class="hero_heading">Smart Home Application</h1>
-      <p class="hero_copy">
-        "Upgrade Your Lifestyle with Our Smart Home App - Effortlessly Control
-        Your Space, Anytime, Anywhere. Elevate your modern living experience
-        with cutting-edge convenience tailored for the young professional."
-      </p>
-      <ul class="social_links">
-        <li class="social_link social_icon facebook">
-          <a href="https://www.facebook.com">
-            <img src="./assets/facebook-icon.svg" alt="facebook" />
-          </a>
-        </li>
-        <li class="social_link social_icon insta">
-          <a href="https://www.instagram.com">
-            <img src="./assets/instagram-icon.svg" alt="instagram" />
-          </a>
-        </li>
-        <li class="social_link social_icon twitter_x">
-          <a href="https://www.twitter.com">
-            <img src="./assets/twitter-x-icon.svg" alt="twitter/x" />
-          </a>
-        </li>
-        <li class="social_link social_icon linkedin">
-          <a href="https://www.linkedin.com">
-            <img src="./assets/linkedin-icon.svg" alt="linkedin" />
-          </a>
-        </li>
-      </ul>
-      <img
-        src="./assets/hero-main-img-xl.png"
-        alt="hero image"
-        class="hero_img"
-      />
-      <img src="./assets/s-icon-white.svg" alt="" class="bg_asset" />
+      </div>
     </header>
   </body>
 </html>

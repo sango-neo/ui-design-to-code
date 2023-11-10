@@ -90,7 +90,7 @@ button:hover {
 /* ================ End of Reset & Global Styles ================= */
 
 .hero_section {
-  height: max(85vh, 700px);
+  height: max(90vh, 740px);
   background-color: var(--primary-blue);
   padding: 0 1rem;
   color: white;
@@ -174,15 +174,42 @@ button:hover {
   gap: 1.5rem;
 }
 
-.hero_section .hero_img {
+/* .hero_section .hero_img {
   width: 64vw;
   min-width: 250px;
   position: absolute;
   top: 50%;
-  /* horizontally center an out of flow element */
   left: 50%;
   transform: translateX(-50%);
-  /* end */
+} */
+
+.hero_section .hero_img_box {
+  /* position: absolute; */
+  margin-top: 3.5rem;
+  display: flex;
+  gap: min(5vw, 70px);
+  justify-content: center;
+}
+
+.hero_img_box .hero_phone_box {
+  overflow: hidden;
+  border-radius: 2rem;
+  border: 4px solid black;
+  max-width: 226px;
+  min-width: 90px;
+
+  box-shadow: -3.1px 2.9px 5.5px rgba(0, 0, 0, 0.069),
+    -10.3px 9.6px 18.5px rgba(0, 0, 0, 0.101),
+    -46px 43px 83px rgba(0, 0, 0, 0.17);
+}
+
+.hero_img_box .hero_phone_box:nth-child(2) {
+  scale: 1.15;
+}
+
+.hero_phone_box .hero_img_ph {
+  width: 100%;
+  object-fit: fill;
 }
 
 .hero_section .bg_asset {

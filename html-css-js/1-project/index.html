@@ -13,6 +13,7 @@
     <title>smartAbode</title>
   </head>
   <body>
+    <!-- Header | ** Should move naviagtion outside header ** -->
     <header class="hero_section container-edge">
       <div class="hero_box">
         <img src="./assets/s-icon-white.svg" alt="" class="bg_asset" />
@@ -97,22 +98,24 @@
             </a>
           </li>
         </ul>
+
+        <!-- Hero Main Image -->
         <div class="hero_img_box">
-          <div class="hero_phone_box">
+          <div class="hero_phone_box extruded-md">
             <img
               src="./assets/placeholders/hero-phone-lg.png"
               alt="hero phone image"
               class="hero_img_ph"
             />
           </div>
-          <div class="hero_phone_box">
+          <div class="hero_phone_box extruded-md">
             <img
               src="./assets/placeholders/hero-phone-lg.png"
               alt="hero phone image"
               class="hero_img_ph"
             />
           </div>
-          <div class="hero_phone_box">
+          <div class="hero_phone_box extruded-md">
             <img
               src="./assets/placeholders/hero-phone-lg.png"
               alt="hero phone image"
@@ -120,19 +123,22 @@
             />
           </div>
         </div>
+
       </div>
     </header>
 
     <!-- add <main> as wrapper; will hold bg illustrations -->
-    <main>
+    <main class="container-edge">
+
       <!-- About section -->
       <section class="about_us_section">
+        <div class="scroll_indicator extruded-sm">&ShortDownArrow;</div>
         <div class="appstore_cta_box">
           <a href="#" class="appstore_cta apple_cta">
-            <img src="./assets/app-store-badge.svg" alt="apple appstore link" />
+            <img src="./assets/app-store-badge.svg" class="extruded-md" alt="apple appstore link" />
           </a>
           <a href="#" class="appstore_cta android_cta">
-            <img src="./assets/google-play-badge.svg" alt="google play link" />
+            <img src="./assets/google-play-badge.svg" class="extruded-md" alt="google play link"/>
           </a>
         </div>
         <h1 class="about_us_heading text-xl">About us</h1>
@@ -142,12 +148,12 @@
             <img
               src="./assets/placeholders/section-phone-lg.png"
               alt="phone image"
-              class="about_img_ph"
+              class="about_img_ph extruded-md"
             />
             <div class="phone_bg"></div>
           </div>
           <div class="about_copy_box">
-            <h2 class="about_copy_title">SmartAbode's Smart Services</h2>
+            <h2 class="about_copy_title text-md">SmartAbode's Smart Services</h2>
             <p class="about_copy">
               At SmartAbode, we pride ourselves on delivering a seamless blend
               of innovation and convenience through our smart home services.
@@ -159,17 +165,9 @@
             </p>
             <a href="#" class="about_cta btn btn-md btn-outline">Learn More</a>
           </div>
-
-          <div class="about_img_box">
-            <img
-              src="./assets/placeholders/section-phone-lg.png"
-              alt="phone image"
-              class="about_img_ph"
-            />
-            <div class="phone_bg"></div>
-          </div>
+          
           <div class="about_copy_box">
-            <h2 class="about_copy_title">SmartAbode's Smart Services</h2>
+            <h2 class="about_copy_title text-md">Let the app manage appliances for you</h2>
             <p class="about_copy">
               Introducing our Room Automation feature – the heartbeat of
               intelligent living. Seamlessly manage all your room's appliances
@@ -182,17 +180,26 @@
             </p>
             <a href="#" class="about_cta btn btn-md btn-outline">Learn More</a>
           </div>
+          
+          <div class="about_img_box">
+            <img
+              src="./assets/placeholders/section-phone-lg.png"
+              alt="phone image"
+              class="about_img_ph extruded-md"
+            />
+            <div class="phone_bg"></div>
+          </div>
 
           <div class="about_img_box">
             <img
               src="./assets/placeholders/section-phone-lg.png"
               alt="phone image"
-              class="about_img_ph"
+              class="about_img_ph extruded-md"
             />
             <div class="phone_bg"></div>
           </div>
           <div class="about_copy_box">
-            <h2 class="about_copy_title">SmartAbode's Smart Services</h2>
+            <h2 class="about_copy_title text-md">Control electrical devices and save energy</h2>
             <p class="about_copy">
               Effortlessly govern the energy consumption of your home,
               strategically controlling electrical devices to maximize
@@ -208,7 +215,7 @@
         </div>
       </section>
 
-      <!-- Clients -->
+      <!-- Clients Section -->
       <section class="clients_section">
         <h1 class="clients_title text-xl">Our Clients</h1>
         <p class="clients_copy">
@@ -464,12 +471,14 @@
           <div class="appstore_cta_box">
             <a href="#" class="appstore_cta apple_cta">
               <img
+              class="extruded-md"
                 src="./assets/app-store-badge.svg"
                 alt="apple appstore link"
               />
             </a>
             <a href="#" class="appstore_cta android_cta">
               <img
+              class="extruded-md"
                 src="./assets/google-play-badge.svg"
                 alt="google play link"
               />

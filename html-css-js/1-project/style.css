@@ -1,3 +1,23 @@
+/* Some Notes:
+
+  === General ===
+  >> Use hsl/hsla color coding
+
+  === Specificity ===
+  >> Aim for low specificity for reset and base classes (0,0,*)
+  >> Aim for intermediate specificity for utitlity classes (0,1-2,*)
+  >> Aim for highest specificity for element-targeted classes (0,2-3,*)
+  ** Element > Util > Base/Reset 
+  
+  === Selector Conventions ===
+  >> Move higher up the parent tree to achieve more specificity
+  >> Use duplicate selector trick to increase specificity 
+  >> Max of 3 selectors for a style block 
+
+  === Util Classes ===
+  >> Follows Tailwind idea of adding classes to the HTML 
+*/
+
 :root {
   /* global variables */
 
@@ -88,6 +108,164 @@ button:hover {
 }
 
 /* ================ End of Reset & Global Styles ================= */
+
+/* utility classes */
+
+.container-edge {
+  display: block;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.container-sm {
+  padding: 2.5rem;
+  text-align: start;
+  max-width: 80%;
+}
+
+.card {
+  padding: 1.5rem 2.5rem;
+  margin-bottom: 1.25rem;
+  border-radius: 4px;
+  border: 1px solid hsl(0, 0%, 67%);
+}
+
+.card-sm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: var(--btn-primary-padding);
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: white;
+  color: var(--dark-blue);
+}
+
+.btn-secondary {
+  background-color: var(--dark-blue);
+  color: white;
+}
+
+.btn-outline {
+  border: 2px solid var(--dark-blue);
+  background-color: transparent;
+  color: var(--dark-blue);
+}
+
+.btn-outline:hover {
+  background-color: var(--dark-blue);
+  color: white;
+  box-shadow: -2.9px 5.5px 9.2px rgba(0, 0, 0, 0.061),
+    -6.7px 12.7px 35.8px rgba(0, 0, 0, 0.089),
+    -29px 55px 78px rgba(0, 0, 0, 0.15);
+}
+
+.btn-outline-onDark {
+  border: 1px solid white;
+  color: white;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.btn-sm {
+  min-width: 80px;
+  padding: 0.75rem 1rem;
+}
+
+.btn-md {
+  padding: 0.75rem 2rem;
+  min-width: 130px;
+}
+
+.btn-lg {
+  padding: 0.75rem 2rem;
+  min-width: 180px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.text-xl {
+  font-size: clamp(32px, calc(1.5rem + 4vw), 4.5rem);
+  font-weight: 800;
+}
+
+.text-lg {
+  font-size: clamp(24px, calc(1.25rem + 2vw), 3.75rem);
+  font-weight: 700;
+}
+
+.text-md {
+  font-size: clamp(20px, calc(1.25rem + 1vw), 2.25rem);
+  font-weight: 700;
+}
+
+.text-sm {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.text-xs {
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.bg-primary {
+  background-color: var(--primary-blue);
+}
+
+.bg-muted {
+  background-color: var(--light-grey-primary);
+}
+
+.bg-dark {
+  background-color: var(--dark-blue);
+}
+
+.selected {
+  border: none;
+  background-color: white;
+  /* must add extruded class as well */
+}
+
+.extruded {
+  box-shadow: -0.8px 3.1px 11.1px 5px rgba(0, 0, 0, 0.05),
+    -1.9px 7.5px 27.3px 5px rgba(0, 0, 0, 0.059),
+    -3.6px 14.1px 50px 5px rgba(0, 0, 0, 0.066),
+    -29px 113px 249px 5px rgba(0, 0, 0, 0.13);
+}
+
+.extruded-sm {
+  box-shadow: -5.1px 2.7px 8.4px rgba(0, 0, 0, 0.028),
+    -13px 12px 20px rgba(0, 0, 0, 0.042), -62px 65px 112px rgba(0, 0, 0, 0.07);
+}
+
+.extruded-md {
+  box-shadow: -2.9px 5.5px 9.2px rgba(0, 0, 0, 0.061),
+    -6.7px 12.7px 35.8px rgba(0, 0, 0, 0.089),
+    -29px 55px 78px rgba(0, 0, 0, 0.15);
+}
+
+/* ========= End of Utils ===========*/
 
 .hero_section {
   height: max(90vh, 740px);
@@ -198,9 +376,9 @@ button:hover {
   max-width: 226px;
   min-width: 90px;
 
-  box-shadow: -3.1px 2.9px 5.5px rgba(0, 0, 0, 0.069),
+  /* box-shadow: -3.1px 2.9px 5.5px rgba(0, 0, 0, 0.069),
     -10.3px 9.6px 18.5px rgba(0, 0, 0, 0.101),
-    -46px 43px 83px rgba(0, 0, 0, 0.17);
+    -46px 43px 83px rgba(0, 0, 0, 0.17); */
 }
 
 .hero_img_box .hero_phone_box:nth-child(2) {
@@ -219,138 +397,108 @@ button:hover {
   right: -5rem;
 }
 
-/* utility classes */
+/* About Section */
 
-.container-edge {
-  display: block;
-  width: 100%;
-  max-width: 1920px;
-  margin: 0 auto;
-}
-
-.container-sm {
-  padding: 2.5rem;
-  text-align: start;
-  max-width: 80%;
-}
-
-.card {
-  padding: 1.5rem 2.5rem;
-  margin-bottom: 1.25rem;
+.about_us_section .scroll_indicator {
+  font-size: 1.5rem;
+  width: min(10vw, 65px);
+  height: min(10vw, 65px);
   border-radius: 4px;
-  border: 1px solid hsl(0, 0%, 67%);
+  display: grid;
+  place-content: center;
+  margin: 2.5rem 4rem 4rem auto;
 }
 
-.card-sm {
+.about_us_section .appstore_cta_box {
+  margin: 12rem 0 4rem;
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
 }
 
-.btn {
-  display: inline-block;
-  padding: var(--btn-primary-padding);
-  font-weight: 700;
-  letter-spacing: 0.2px;
-  font-size: 0.95rem;
-  text-decoration: none;
-  border: none;
-  border-radius: 4px;
-}
-
-.btn-primary {
-  background-color: white;
-  color: var(--dark-blue);
-}
-
-.btn-secondary {
-  background-color: var(--dark-blue);
-  color: white;
-}
-
-.btn-outline {
-  border: 1px solid var(--dark-blue);
+/* .about_us_section .appstore_cta {
   background-color: transparent;
-  color: var(--dark-blue);
+} */
+
+.about_us_section .appstore_cta img {
+  display: inline-block;
+  width: 160px;
 }
 
-.btn-outline-onDark {
-  border: 1px solid white;
-  color: white;
+.about_us_section .about_us_heading {
+  margin: 8rem 0 6rem;
+  text-align: center;
 }
 
-.btn-block {
-  display: block;
-  width: 100%;
+.about_us_section .main_content_box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin: 0 4rem 4rem;
+  place-content: center;
+}
+/* 
+.about_us_section .main_content_box::before {
+  content: "";
+  height: 2rem;
+} */
+
+.about_us_section .about_img_box {
+  display: flex;
+  justify-content: center;
+  position: relative;
 }
 
-.btn-sm {
-  width: 80px;
-  padding: 0.75rem 1rem;
+.about_us_section .about_img_ph {
+  max-width: 262px;
+  min-width: 90px;
+  border-radius: 2rem;
+  border: 4px solid black;
+  z-index: 2;
+  scale: 1.1;
 }
 
-.btn-md {
-  padding: 0.75rem 2rem;
-  width: 130px;
-}
-
-.btn-lg {
-  padding: 0.75rem 2rem;
-  width: 180px;
-}
-
-.btn:hover {
-  opacity: 0.9;
-}
-
-.text-xl {
-  font-size: clamp(32px, calc(1.5rem + 4vw), 4.5rem);
-  font-weight: 800;
-}
-
-.text-lg {
-  font-size: clamp(24px, calc(1.25rem + 3vw), 3.75rem);
-  font-weight: 400;
-}
-
-.text-md {
-  font-size: clamp(24px, calc(1.25rem + 3vw), 3.75rem);
-}
-
-.text-sm {
-  font-size: 16px;
-  font-weight: 400;
-}
-
-.text-xs {
-  font-size: 14px;
-  font-style: italic;
-  font-weight: 400;
-}
-
-.bg-primary {
+.about_us_section .phone_bg {
   background-color: var(--primary-blue);
+  width: 90%;
+  height: 65%;
+  align-self: flex-end;
+  position: absolute;
+  z-index: 1;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
 }
 
-.bg-muted {
-  background-color: var(--light-grey-primary);
+.about_us_section .about_copy_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.bg-dark {
-  background-color: var(--dark-blue);
+.about_copy_box .about_copy_title {
+  max-width: 70%;
+  margin-bottom: 1rem;
 }
 
-.selected {
-  border: none;
-  background-color: white;
-  /* must add extruded class as well */
+.about_copy_box .about_copy {
+  margin-bottom: 2rem;
+  max-width: 70%;
 }
 
-.extruded {
-  box-shadow: -0.8px 3.1px 11.1px 5px rgba(0, 0, 0, 0.05),
-    -1.9px 7.5px 27.3px 5px rgba(0, 0, 0, 0.059),
-    -3.6px 14.1px 50px 5px rgba(0, 0, 0, 0.066),
-    -6.5px 25.2px 82.4px 5px rgba(0, 0, 0, 0.08),
-    -12.1px 47.2px 132.6px 5px rgba(0, 0, 0, 0.101),
-    -29px 113px 249px 5px rgba(0, 0, 0, 0.13);
+.about_copy_box .about_cta {
+  width: 190px;
 }
+
+/* Clients Section */
+
+/* Testimonials Section */
+
+/* FAQs */
+
+/* App CTA Section */
+
+/* Banner */
+
+/* Footer Section */

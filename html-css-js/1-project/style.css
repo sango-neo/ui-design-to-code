@@ -125,6 +125,11 @@ button:hover {
   max-width: 80%;
 }
 
+.section-heading.section-heading {
+  margin: 8rem 0 6rem;
+  text-align: center;
+}
+
 .card {
   padding: 1.5rem 2.5rem;
   margin-bottom: 1.25rem;
@@ -418,19 +423,15 @@ button:hover {
   gap: 2rem;
 }
 
-/* .about_us_section .appstore_cta {
-  background-color: transparent;
-} */
-
 .about_us_section .appstore_cta img {
   display: inline-block;
   width: 160px;
 }
 
-.about_us_section .about_us_heading {
+/* .about_us_section .about_us_heading {
   margin: 8rem 0 6rem;
   text-align: center;
-}
+} */
 
 .about_us_section .main_content_box {
   display: grid;
@@ -492,6 +493,42 @@ button:hover {
 }
 
 /* Clients Section */
+
+.clients_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.clients_section .clients_copy {
+  text-align: center;
+  margin: -3rem 0 3rem;
+  max-width: min(45%, 600px);
+  min-width: 250px;
+}
+
+.clients_section .brand_box {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  width: max(60%, 420px);
+  justify-content: center;
+}
+
+.brand_box .brand_card {
+  padding: 1rem 1rem;
+  border-radius: 0.5rem;
+  width: min(200px, 30vw);
+  min-width: 110px;
+
+  box-shadow: -6.7px 6.7px 5.3px rgba(0, 0, 0, 0.02),
+    -22.3px 22.3px 17.9px rgba(0, 0, 0, 0.032),
+    -10px 100px 80px rgba(0, 0, 0, 0.02);
+}
+
+.brand_box .brand_card img {
+  width: 100%;
+}
 
 /* Testimonials Section */
 

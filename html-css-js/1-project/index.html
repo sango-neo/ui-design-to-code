@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
@@ -223,7 +223,7 @@
           premises for easier and more efficient control of their facilities
         </p>
         <div class="brand_box">
-          <div class="brand_card card-sm">
+          <div class="brand_card">
             <img
               src="./assets/placeholders/brand-1.svg"
               alt="brand logo"
@@ -375,83 +375,91 @@
       </section>
 
       <!-- FAQs -->
-      <section class="FAQ_section">
+      <section class="FAQ_section container-edge">
         <h1 class="FAQ_title text-xl section-heading">FAQ's</h1>
         <div class="faq_card_box">
           <div class="faq_card">
             <div class="icon_box">
+              <i class="faq_icon plus_icon show">+</i>
+              <i class="faq_icon minus_icon">-</i>
+            </div>
+            <p class="faq_question">
+              How secure is my data when using the smart home app?
+            </p>
+            <div class="icon_box dummy_content">
               <i class="plus_icon">+</i>
               <i class="minus_icon">-</i>
             </div>
-            <div class="faq_text_box">
-              <p class="faq_question">
-                How secure is my data when using the smart home app?
-              </p>
-              <p class="faq_answer">
-                Your security is our top priority. We employ robust encryption
-                protocols to safeguard your data, ensuring that your personal
-                information and device controls are kept confidential and
-                secure.
-              </p>
-            </div>
+            <p class="faq_answer">
+              Your security is our top priority. We employ robust encryption
+              protocols to safeguard your data, ensuring that your personal
+              information and device controls are kept confidential and
+              secure.
+            </p>
           </div>
 
           <div class="faq_card">
             <div class="icon_box">
-              <i class="plus_icon">+</i>
-              <i class="minus_icon">-</i>
+              <i class="faq_icon plus_icon show">+</i>
+              <i class="faq_icon minus_icon">-</i>
             </div>
-            <div class="faq_text_box">
-              <p class="faq_question">
-                Can I integrate the smart home app with other smart devices in
+            <p class="faq_question">
+              Can I integrate the smart home app with other smart devices in
                 my home?
-              </p>
-              <p class="faq_answer">
-                Absolutely. Our app is designed for seamless integration with a
-                wide range of smart devices, allowing you to create a
-                comprehensive and interconnected smart home ecosystem. Check our
-                compatibility list for supported devices.
-              </p>
+            </p>
+            <div class="icon_box dummy_content">
+              <i class="plus_icon">+</i>
+              <i class="minus_icon">-</i>
             </div>
+            <p class="faq_answer">
+              Absolutely. Our app is designed for seamless integration with a
+              wide range of smart devices, allowing you to create a
+              comprehensive and interconnected smart home ecosystem. Check our
+              compatibility list for supported devices.
+            </p>
           </div>
 
           <div class="faq_card">
             <div class="icon_box">
+              <i class="faq_icon plus_icon show">+</i>
+              <i class="faq_icon minus_icon">-</i>
+            </div>
+            <p class="faq_question">
+              How does the app contribute to energy savings in my home?
+            </p>
+            <div class="icon_box dummy_content">
               <i class="plus_icon">+</i>
               <i class="minus_icon">-</i>
             </div>
-            <div class="faq_text_box">
-              <p class="faq_question">
-                How does the app contribute to energy savings in my home?
-              </p>
-              <p class="faq_answer">
-                The app provides detailed insights into your energy usage and
-                offers intelligent control features, allowing you to schedule
-                and optimize device usage. This not only enhances convenience
-                but also contributes to significant energy savings, positively
-                impacting your utility bills.
-              </p>
-            </div>
+            <p class="faq_answer">
+              The app provides detailed insights into your energy usage and
+              offers intelligent control features, allowing you to schedule
+              and optimize device usage. This not only enhances convenience
+              but also contributes to significant energy savings, positively
+              impacting your utility bills.
+            </p>
           </div>
 
           <div class="faq_card">
             <div class="icon_box">
-              <i class="plus_icon">+</i>
-              <i class="minus_icon">-</i>
+              <i class="faq_icon plus_icon show">+</i>
+              <i class="faq_icon minus_icon">-</i>
             </div>
-            <div class="faq_text_box">
-              <p class="faq_question">
-                What customer support is available if I encounter issues with
+            <p class="faq_question">
+              What customer support is available if I encounter issues with
                 the app?
-              </p>
-              <p class="faq_answer">
-                Our dedicated customer support team is ready to assist you.
-                Reach out through our in-app support feature or visit our help
-                center for comprehensive guides and troubleshooting. Your
-                satisfaction is our priority, and we're here to ensure a smooth
-                experience with the smart home app.
-              </p>
+            </p>
+            <div class="icon_box dummy_content">
+              <i class="plus_icon">+</i>
+              <i class="minus_icon">-</i>
             </div>
+            <p class="faq_answer">
+              Our dedicated customer support team is ready to assist you.
+              Reach out through our in-app support feature or visit our help
+              center for comprehensive guides and troubleshooting. Your
+              satisfaction is our priority, and we're here to ensure a smooth
+              experience with the smart home app.
+            </p>
           </div>
         </div>
       </section>
@@ -571,6 +579,20 @@
         document.getElementById("curr_year").textContent =
           new Date().getFullYear();
       });
+
+      // ***fix this***
+      document.querySelectorAll('.faq_card').forEach( el => {
+          el.addEventListener('click', (e) => {
+          console.log(e.target);
+          document.querySelector('.dummy_content').classList.toggle('show');     
+          document.querySelector('.faq_answer').classList.toggle('show');
+          document.querySelector('.faq_card').classList.toggle('open');    
+
+          document.querySelectorAll('.faq_icon').forEach(icon => {
+           icon.classList.toggle('show');
+          });
+        });
+      })
     </script>
   </body>
 </html>

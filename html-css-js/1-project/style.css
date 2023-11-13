@@ -604,6 +604,76 @@ button:hover {
 
 /* FAQs */
 
+.FAQ_section .faq_card_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.faq_card_box .faq_card {
+  border: 0.5px solid var(--light-grey-primary);
+  border-radius: 0.5rem;
+  background-color: var(--light-grey-secondary);
+  padding: 1rem;
+
+  width: min(70%, 700px);
+  min-width: 280px;
+
+  display: grid;
+  grid-template-columns: minmax(auto, 30px) 1fr;
+  column-gap: 1.5rem;
+  row-gap: 0.75rem;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq_card .dummy_content {
+  opacity: 0;
+  height: 0;
+  display: none;
+}
+
+.faq_card .faq_answer {
+  display: none;
+  font-weight: 300;
+}
+
+.icon_box.icon_box {
+  /* width: 80px; */
+}
+
+.faq_card .icon_box .plus_icon,
+.faq_card .icon_box .minus_icon {
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  /* line-height: 50%; */
+}
+
+.faq_card .icon_box .minus_icon {
+  color: red;
+}
+
+.faq_card .icon_box * {
+  display: none;
+  text-align: center;
+}
+
+.show.show.show {
+  display: block;
+}
+
+.open.open.open {
+  border: none;
+  background-color: white;
+
+  box-shadow: -0.9px 2.2px 5.3px rgba(0, 0, 0, 0.012),
+    -3.1px 7.4px 17.9px rgba(0, 0, 0, 0.018),
+    -14px 33px 80px rgba(0, 0, 0, 0.03);
+}
+
 /* App CTA Section */
 
 /* Banner */

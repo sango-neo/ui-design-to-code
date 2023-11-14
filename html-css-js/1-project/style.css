@@ -201,8 +201,8 @@ button:hover {
 }
 
 .btn-lg {
-  padding: 0.75rem 2rem;
-  min-width: 180px;
+  padding: 1rem 2rem;
+  min-width: 200px;
 }
 
 .btn:hover {
@@ -403,6 +403,14 @@ button:hover {
   right: -5rem;
 }
 
+/* Main Page Content */
+
+main > section {
+  max-width: 1380px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* About Section */
 
 .about_us_section .scroll_indicator {
@@ -437,7 +445,7 @@ button:hover {
 .about_us_section .main_content_box {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  gap: 3.5rem;
   margin: 0 4rem 4rem;
   place-content: center;
 }
@@ -464,7 +472,7 @@ button:hover {
 
 .about_us_section .phone_bg {
   background-color: var(--primary-blue);
-  width: 90%;
+  width: 100%;
   height: 65%;
   align-self: flex-end;
   position: absolute;
@@ -512,14 +520,14 @@ button:hover {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
-  width: max(60%, 420px);
+  width: max(65%, 280px);
   justify-content: center;
 }
 
 .brand_box .brand_card {
   padding: 1rem 1rem;
   border-radius: 0.5rem;
-  width: min(200px, 30vw);
+  width: min(190px, 30vw);
   min-width: 110px;
 
   box-shadow: -6.7px 6.7px 5.3px rgba(0, 0, 0, 0.02),
@@ -609,6 +617,7 @@ button:hover {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  margin-bottom: 8rem;
 }
 
 .faq_card_box .faq_card {
@@ -637,10 +646,6 @@ button:hover {
 .faq_card .faq_answer {
   display: none;
   font-weight: 300;
-}
-
-.icon_box.icon_box {
-  /* width: 80px; */
 }
 
 .faq_card .icon_box .plus_icon,
@@ -676,6 +681,102 @@ button:hover {
 
 /* App CTA Section */
 
+.dl_app_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 8rem;
+}
+
+.dl_copy_box * {
+  margin-bottom: 2rem;
+}
+
+.dl_copy_box .dl_title {
+  max-width: 280px;
+}
+
+.dl_copy_box .dl_copy {
+  width: 65%;
+  min-width: 280px;
+}
+
+.dl_copy_box .appstore_cta_box {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2.5rem;
+}
+
+.dl_copy_box .appstore_cta img {
+  display: inline-block;
+  width: 160px;
+}
+
+.dl_copy_box .about_img_box {
+  display: flex;
+  justify-content: center;
+}
+
+.dl_app_section .cta_img_ph {
+  max-width: 262px;
+  min-width: 90px;
+  border-radius: 2rem;
+  border: 4px solid black;
+  scale: 1.1;
+
+  box-shadow: -7.2px 6.1px 5px rgba(0, 0, 0, 0.021),
+    -20px 16.9px 13.8px rgba(0, 0, 0, 0.03),
+    -48.2px 40.7px 33.2px rgba(0, 0, 0, 0.039),
+    -160px 135px 110px rgba(0, 0, 0, 0.06);
+}
+
 /* Banner */
 
+.sub_banner_section {
+  width: 100%;
+  background-color: var(--primary-blue);
+  padding: 3rem 8rem;
+  color: white;
+  border-radius: 0.5rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+
+  margin-bottom: 8rem;
+  font-weight: 300;
+
+  /* Let it behave differently to the other sections because it is looks different */
+  max-width: 1300px;
+}
+
+.sub_banner_section .sub_copy_box {
+  display: inline-block;
+}
+
+.sub_banner_section .sub_title {
+  font-weight: 500;
+}
+
+.sub_banner_section .sub_copy {
+  max-width: 550px;
+}
+
+.sub_banner_section .sub_btn {
+  display: inline-block;
+  background-color: transparent;
+  font-weight: 300;
+}
+
+.sub_banner_section .sub_btn:hover {
+  background-color: white;
+  color: var(--dark-blue);
+  font-weight: 400;
+}
+
 /* Footer Section */
+.logo > img {
+  max-width: 180px;
+}

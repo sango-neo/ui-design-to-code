@@ -6,13 +6,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
     <title>smartAbode</title>
   </head>
   <body>
+    <!-- Header | ** Should move naviagtion outside header ** -->
     <header class="hero_section container-edge">
       <div class="hero_box">
         <img src="./assets/s-icon-white.svg" alt="" class="bg_asset" />
@@ -97,22 +98,24 @@
             </a>
           </li>
         </ul>
+
+        <!-- Hero Main Image -->
         <div class="hero_img_box">
-          <div class="hero_phone_box">
+          <div class="hero_phone_box extruded-md">
             <img
               src="./assets/placeholders/hero-phone-lg.png"
               alt="hero phone image"
               class="hero_img_ph"
             />
           </div>
-          <div class="hero_phone_box">
+          <div class="hero_phone_box extruded-md">
             <img
               src="./assets/placeholders/hero-phone-lg.png"
               alt="hero phone image"
               class="hero_img_ph"
             />
           </div>
-          <div class="hero_phone_box">
+          <div class="hero_phone_box extruded-md">
             <img
               src="./assets/placeholders/hero-phone-lg.png"
               alt="hero phone image"
@@ -120,79 +123,80 @@
             />
           </div>
         </div>
+
       </div>
     </header>
 
     <!-- add <main> as wrapper; will hold bg illustrations -->
-    <main>
+    <main class="container-edge">
+
       <!-- About section -->
       <section class="about_us_section">
+        <div class="scroll_indicator extruded-sm">&ShortDownArrow;</div>
         <div class="appstore_cta_box">
           <a href="#" class="appstore_cta apple_cta">
-            <img src="./assets/app-store-badge.svg" alt="apple appstore link" />
+            <img src="./assets/app-store-badge.svg" class="extruded-md" alt="apple appstore link" />
           </a>
           <a href="#" class="appstore_cta android_cta">
-            <img src="./assets/google-play-badge.svg" alt="google play link" />
+            <img src="./assets/google-play-badge.svg" class="extruded-md" alt="google play link"/>
           </a>
         </div>
-        <h1 class="about_us_heading text-xl">About us</h1>
+        <h1 class="about_us_heading text-xl section-heading">About us</h1>
         <div class="main_content_box">
           <!-- ** pseduo before here ** -->
           <div class="about_img_box">
             <img
               src="./assets/placeholders/section-phone-lg.png"
               alt="phone image"
-              class="about_img_ph"
+              class="about_img_ph extruded-md"
             />
             <div class="phone_bg"></div>
           </div>
           <div class="about_copy_box">
-            <h2 class="about_copy_title">SmartAbode's Smart Services</h2>
+            <h2 class="about_copy_title text-md">SmartAbode's Smart Services</h2>
             <p class="about_copy">
               At SmartAbode, we pride ourselves on delivering a seamless blend
               of innovation and convenience through our smart home services.
               From intuitive home automation to energy-efficient solutions, our
               app empowers you to effortlessly control lighting, climate,
               security, and more. Experience the epitome of modern living with
-              personalized settings tailored to your lifestyle. Welcome to a
-              smarter, more connected home with SmartAbode.
+              personalized settings tailored to you.
             </p>
             <a href="#" class="about_cta btn btn-md btn-outline">Learn More</a>
           </div>
-
-          <div class="about_img_box">
-            <img
-              src="./assets/placeholders/section-phone-lg.png"
-              alt="phone image"
-              class="about_img_ph"
-            />
-            <div class="phone_bg"></div>
-          </div>
+          
           <div class="about_copy_box">
-            <h2 class="about_copy_title">SmartAbode's Smart Services</h2>
+            <h2 class="about_copy_title text-md">Let the app manage appliances for you</h2>
             <p class="about_copy">
               Introducing our Room Automation feature – the heartbeat of
               intelligent living. Seamlessly manage all your room's appliances
               with a tap on your device. From setting the perfect ambiance to
               optimizing energy usage, our smart home app puts you in control.
               Experience a harmonious blend of comfort and efficiency,
-              redefining how you interact with your space. Welcome to a home
-              where every room adapts to your needs effortlessly, courtesy of
-              SmartAbode.
+              redefining how you interact with your space.
             </p>
             <a href="#" class="about_cta btn btn-md btn-outline">Learn More</a>
+          </div>
+          
+          <div class="about_img_box">
+            <img
+              src="./assets/placeholders/section-phone-lg.png"
+              alt="phone image"
+              class="about_img_ph extruded-md"
+            />
+            <div class="phone_bg"></div>
           </div>
 
           <div class="about_img_box">
             <img
               src="./assets/placeholders/section-phone-lg.png"
               alt="phone image"
-              class="about_img_ph"
+              class="about_img_ph extruded-md"
             />
             <div class="phone_bg"></div>
           </div>
           <div class="about_copy_box">
-            <h2 class="about_copy_title">SmartAbode's Smart Services</h2>
+            <h2 class="about_copy_title text-md">Control electrical devices and save energy</h2>
             <p class="about_copy">
               Effortlessly govern the energy consumption of your home,
               strategically controlling electrical devices to maximize
@@ -208,15 +212,15 @@
         </div>
       </section>
 
-      <!-- Clients -->
+      <!-- Clients Section -->
       <section class="clients_section">
-        <h1 class="clients_title text-xl">Our Clients</h1>
+        <h1 class="clients_title text-xl section-heading" >Our Clients</h1>
         <p class="clients_copy">
           Our product works so well, trusted companies have used it on their
           premises for easier and more efficient control of their facilities
         </p>
         <div class="brand_box">
-          <div class="brand_card card-sm">
+          <div class="brand_card">
             <img
               src="./assets/placeholders/brand-1.svg"
               alt="brand logo"
@@ -276,8 +280,8 @@
       </section>
 
       <!-- Testimonials -->
-      <section class="testimonials">
-        <h1 class="testimonials_title">Testimonials</h1>
+      <section class="testimonials_section">
+        <h1 class="testimonials_title text-xl section-heading text-xl section-heading">Testimonials</h1>
         <p class="testimonials_copy">
           Don't just take it from us, hear what people who've used our
           SmartAbode systems say about how it impacted their lives for the
@@ -285,7 +289,7 @@
         </p>
         <div class="testimonial_card_box">
             <div class="testimonial_card">
-              <p class="testimonial_text">
+              <p class="testimonial_text text-xs">
                 Revolutionized my design studio – this app's seamless control
                 blends ambiance with creativity effortlessly.
               </p>
@@ -297,14 +301,14 @@
                   width="100"
                 />
                 <div class="profile_details">
-                  <h4 class="profile_name">Shaun Lively</h4>
+                  <h5 class="profile_name">Shaun Lively</h5>
                   <p class="user_title">Product Designer</p>
                 </div>
               </div>
             </div>
 
             <div class="testimonial_card">
-              <p class="testimonial_text">
+              <p class="testimonial_text text-xs">
                 Transformed our office – precision control, enhancing
                 productivity and showcasing our commitment to innovation.
               </p>
@@ -316,14 +320,14 @@
                   width="100"
                 />
                 <div class="profile_details">
-                  <h4 class="profile_name">Mark Go</h4>
+                  <h5 class="profile_name">Mark Go</h5>
                   <p class="user_title">Engineering Lead</p>
                 </div>
               </div>
             </div>
 
             <div class="testimonial_card">
-              <p class="testimonial_text">
+              <p class="testimonial_text text-xs">
                 Simplicity meets control at home – this app is my personal
                 assistant, ensuring seamless adaptation to my lifestyle.
               </p>
@@ -335,14 +339,14 @@
                   width="100"
                 />
                 <div class="profile_details">
-                  <h4 class="profile_name">Prudence Motle</h4>
+                  <h5 class="profile_name">Prudence Motle</h5>
                   <p class="user_title">Business Analyst</p>
                 </div>
               </div>
             </div>
 
             <div class="testimonial_card">
-              <p class="testimonial_text">
+              <p class="testimonial_text text-xs">
                 From the factory floor to home, I use it everywhere. This app
                 streamlines operations, enhancing efficiency and ensuring smart
                 living with energy savings.
@@ -355,7 +359,7 @@
                   width="100"
                 />
                 <div class="profile_details">
-                  <h4 class="profile_name">Thuso Kay</h4>
+                  <h5 class="profile_name">Thuso Kay</h5>
                   <p class="user_title">Steel Manufacturer</p>
                 </div>
               </div>
@@ -363,90 +367,96 @@
           </div>
         </div>
         <div class="testimonials_end">
-          <span>&lArr;</span>
-          &nbsp;
-          <span>&rArr;</span>
+          <span>&#x291D;</span>&nbsp;<span>&#x291E;</span>
         </div>
       </section>
 
       <!-- FAQs -->
       <section class="FAQ_section">
-        <h1 class="FAQ_title">FAQ's</h1>
+        <h1 class="FAQ_title text-xl section-heading">FAQ's</h1>
         <div class="faq_card_box">
           <div class="faq_card">
             <div class="icon_box">
+              <i class="faq_icon plus_icon show">+</i>
+              <i class="faq_icon minus_icon">-</i>
+            </div>
+            <p class="faq_question">
+              How secure is my data when using the smart home app?
+            </p>
+            <div class="icon_box dummy_content">
               <i class="plus_icon">+</i>
               <i class="minus_icon">-</i>
             </div>
-            <div class="faq_text_box">
-              <p class="faq_question">
-                How secure is my data when using the smart home app?
-              </p>
-              <p class="faq_answer">
-                Your security is our top priority. We employ robust encryption
-                protocols to safeguard your data, ensuring that your personal
-                information and device controls are kept confidential and
-                secure.
-              </p>
-            </div>
+            <p class="faq_answer">
+              Your security is our top priority. We employ robust encryption
+              protocols to safeguard your data, ensuring that your personal
+              information and device controls are kept confidential and
+              secure.
+            </p>
           </div>
 
           <div class="faq_card">
             <div class="icon_box">
-              <i class="plus_icon">+</i>
-              <i class="minus_icon">-</i>
+              <i class="faq_icon plus_icon show">+</i>
+              <i class="faq_icon minus_icon">-</i>
             </div>
-            <div class="faq_text_box">
-              <p class="faq_question">
-                Can I integrate the smart home app with other smart devices in
+            <p class="faq_question">
+              Can I integrate the smart home app with other smart devices in
                 my home?
-              </p>
-              <p class="faq_answer">
-                Absolutely. Our app is designed for seamless integration with a
-                wide range of smart devices, allowing you to create a
-                comprehensive and interconnected smart home ecosystem. Check our
-                compatibility list for supported devices.
-              </p>
+            </p>
+            <div class="icon_box dummy_content">
+              <i class="plus_icon">+</i>
+              <i class="minus_icon">-</i>
             </div>
+            <p class="faq_answer">
+              Absolutely. Our app is designed for seamless integration with a
+              wide range of smart devices, allowing you to create a
+              comprehensive and interconnected smart home ecosystem. Check our
+              compatibility list for supported devices.
+            </p>
           </div>
 
           <div class="faq_card">
             <div class="icon_box">
+              <i class="faq_icon plus_icon show">+</i>
+              <i class="faq_icon minus_icon">-</i>
+            </div>
+            <p class="faq_question">
+              How does the app contribute to energy savings in my home?
+            </p>
+            <div class="icon_box dummy_content">
               <i class="plus_icon">+</i>
               <i class="minus_icon">-</i>
             </div>
-            <div class="faq_text_box">
-              <p class="faq_question">
-                How does the app contribute to energy savings in my home?
-              </p>
-              <p class="faq_answer">
-                The app provides detailed insights into your energy usage and
-                offers intelligent control features, allowing you to schedule
-                and optimize device usage. This not only enhances convenience
-                but also contributes to significant energy savings, positively
-                impacting your utility bills.
-              </p>
-            </div>
+            <p class="faq_answer">
+              The app provides detailed insights into your energy usage and
+              offers intelligent control features, allowing you to schedule
+              and optimize device usage. This not only enhances convenience
+              but also contributes to significant energy savings, positively
+              impacting your utility bills.
+            </p>
           </div>
 
           <div class="faq_card">
             <div class="icon_box">
-              <i class="plus_icon">+</i>
-              <i class="minus_icon">-</i>
+              <i class="faq_icon plus_icon show">+</i>
+              <i class="faq_icon minus_icon">-</i>
             </div>
-            <div class="faq_text_box">
-              <p class="faq_question">
-                What customer support is available if I encounter issues with
+            <p class="faq_question">
+              What customer support is available if I encounter issues with
                 the app?
-              </p>
-              <p class="faq_answer">
-                Our dedicated customer support team is ready to assist you.
-                Reach out through our in-app support feature or visit our help
-                center for comprehensive guides and troubleshooting. Your
-                satisfaction is our priority, and we're here to ensure a smooth
-                experience with the smart home app.
-              </p>
+            </p>
+            <div class="icon_box dummy_content">
+              <i class="plus_icon">+</i>
+              <i class="minus_icon">-</i>
             </div>
+            <p class="faq_answer">
+              Our dedicated customer support team is ready to assist you.
+              Reach out through our in-app support feature or visit our help
+              center for comprehensive guides and troubleshooting. Your
+              satisfaction is our priority, and we're here to ensure a smooth
+              experience with the smart home app.
+            </p>
           </div>
         </div>
       </section>
@@ -455,7 +465,7 @@
 
       <section class="dl_app_section">
         <div class="dl_copy_box">
-          <h1 class="dl_title">Download App</h1>
+          <h1 class="dl_title text-xl">Download App</h1>
           <p class="dl_copy">
             Get the app today! It's available now in the App store on iPhone and
             on the Google Play app for Android phones. Make a smart choice with
@@ -464,12 +474,14 @@
           <div class="appstore_cta_box">
             <a href="#" class="appstore_cta apple_cta">
               <img
+              class="extruded-md"
                 src="./assets/app-store-badge.svg"
                 alt="apple appstore link"
               />
             </a>
             <a href="#" class="appstore_cta android_cta">
               <img
+              class="extruded-md"
                 src="./assets/google-play-badge.svg"
                 alt="google play link"
               />
@@ -480,33 +492,33 @@
         <img
           src="./assets/placeholders/section-phone-lg.png"
           alt="phone image"
-          class="about_img_ph"
+          class="cta_img_ph extruded-sm"
         />
       </section>
 
       <!-- Subscribe banner -->
-      <section class="sub_banner">
+      <section class="sub_banner_section">
         <div class="sub_copy_box">
-          <h2 class="sub_title">Subscribe to get updated</h2>
+          <h2 class="sub_title text-md">Subscribe to get updated</h2>
           <p class="sub_copy">
             You can get the latest updates on new developments and the general
             product direction by subscribing to our newsletter.
           </p>
-          <button class="sub_btn btn btn-lg btn-outline-onDark">
-            Subscribe
-          </button>
         </div>
+        <button class="sub_btn btn btn-lg btn-outline-onDark">
+          Subscribe
+        </button>
       </section>
     </main>
 
     <!-- footer -->
     <footer class="footer_section">
       <div class="footer_actions_box">
-        <div class="footer_column">
+        <div class="footer_column cta_column">
           <div class="logo">
             <img src="./assets/logo-black.svg" alt="SmartAbode logo" />
           </div>
-          <p class="footer_copy">
+          <p class="footer_copy text-xs">
             Join thousands of individuals choosing to live smarter. Take your
             first step by registering for a SmartAbode user account. No hassles,
             just your email address.
@@ -515,9 +527,9 @@
             <input
               type="text"
               placeholder="Email Address"
-              class="register_input"
+              class="reg_input"
             />
-            <input type="submit" value="Register" class="register_btn" />
+            <input type="submit" value="Register" class="reg_btn " />
           </form>
         </div>
         <div class="footer_column">
@@ -564,6 +576,20 @@
         document.getElementById("curr_year").textContent =
           new Date().getFullYear();
       });
+
+      // ***fix this***
+      document.querySelectorAll('.faq_card').forEach( el => {
+          el.addEventListener('click', (e) => {
+          console.log(e.target);
+          document.querySelector('.dummy_content').classList.toggle('show');     
+          document.querySelector('.faq_answer').classList.toggle('show');
+          document.querySelector('.faq_card').classList.toggle('open');    
+
+          document.querySelectorAll('.faq_icon').forEach(icon => {
+           icon.classList.toggle('show');
+          });
+        });
+      })
     </script>
   </body>
 </html>

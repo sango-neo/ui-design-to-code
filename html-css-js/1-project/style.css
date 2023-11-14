@@ -778,5 +778,63 @@ main > section {
 
 /* Footer Section */
 .logo > img {
-  max-width: 180px;
+  max-width: 160px;
+  margin-bottom: 1.5rem;
+}
+
+.footer_section .footer_actions_box {
+  max-width: 1300px;
+  margin: 0 auto 4rem;
+
+  display: grid;
+  grid-template-columns: 1.75fr repeat(2, 1.25fr) 1fr;
+  gap: 6rem;
+  align-content: start;
+}
+
+.cta_column * {
+  font-style: normal;
+}
+
+.cta_column .footer_copy {
+  margin-bottom: 3rem;
+  max-width: 320px;
+}
+
+.cta_column .reg_input {
+  outline: none;
+  border: none;
+  background-color: var(--light-grey-secondary);
+  padding: 0.5rem;
+  border: 0.5px solid var(--light-grey-primary);
+  border-radius: 0.25rem;
+  width: 150px;
+}
+
+.cta_column .reg_btn {
+  color: var(--dark-blue);
+  font-weight: 500;
+  background-color: transparent;
+  border: 0.5px solid var(--dark-blue);
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  width: 90px;
+}
+
+.footer_column .footer_cat_title {
+  margin-bottom: 3.5rem;
+}
+
+.footer_column .footer_cat_li {
+  font-weight: 400;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer_section .copyright_box {
+  background-color: var(--dark-blue);
+  color: white;
+  padding: 1rem;
+  display: grid;
+  place-content: center;
 }
